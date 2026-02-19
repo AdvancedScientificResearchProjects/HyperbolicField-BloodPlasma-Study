@@ -1,6 +1,20 @@
 # HyperbolicField-BloodPlasma-Study
 Experimental datasets, imaging results and analytical materials from blood plasma exposure to hyperbolic field emitters. Includes raw data, controlled environment documentation and protocol references.
 
+## Как смотреть данные
+
+1. **Выбрать пациента** → таблица ниже, кликнуть на номер
+2. **README пациента** — главный файл:
+   - Протокол (группа крови, время забора, центрифугирования, излучения)
+   - Таблица образцов (ID, объём, время отбора)
+   - Таблица фото с привязкой к PDF-протоколу (файл → страница → подпись → образцы)
+   - EXIF параметры каждого фото
+   - Описание фото (сцена, количество образцов, морфология плазмы)
+3. **Фото** → `photos/jpg/` — JPG для браузера, `photos/original/` — оригиналы HEIC
+4. **PDF-протокол** → `protocol_part-*.pdf` — чек-лист эксперимента с фото
+5. **Структурированные данные** → `analysis.json` — всё из README в машиночитаемом виде (включая визуальные описания фото)
+6. **Сводка по всем пациентам** → [`processed/all_patients.json`](processed/all_patients.json)
+
 ## Пациенты
 
 | Пациент | Дата | Группа крови | Образцы | Фото | Излучение |
