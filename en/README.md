@@ -66,6 +66,14 @@ Each plasma sample is identified by a code in the format **`{channel}.{patient}.
 - Series `.2` (second sample) — typically 1.0 ml of plasma
 - Not all patients have a second series; the number of samples depends on the volume of plasma obtained
 
+## Reports
+
+| Report | Date | Description |
+|--------|------|-------------|
+| [Experiment protocol](../reports/experiment_protocol_en.md) | 2026-02 | Experiment setup, channels, key observations |
+| [AI analysis (8 providers)](../reports/2026-02-25_ai-analysis/report_en.md) | 2026-02-25 | Multi-AI image analysis: 8 Vision API providers, MoA synthesis, CV + ML metrics |
+| [LLM Vision clot analysis](../reports/2026-02-26_llm-vision-analysis/report_en.md) | 2026-02-26 | 101-photo clot analysis by Claude Opus 4.6, README-enriched channel mapping, coagulation staging |
+
 ## Experiment protocol
 
 General sequence for each patient:
