@@ -13,7 +13,7 @@ Experimental datasets, imaging results and analytical materials from blood plasm
 3. **Фото** → `photos/jpg/` — JPG для браузера, `photos/original/` — оригиналы HEIC
 4. **PDF-протокол** → `protocol_part-*.pdf` — чек-лист эксперимента с фото
 5. **Структурированные данные** → `analysis.json` — всё из README в машиночитаемом виде (включая визуальные описания фото)
-6. **Сводка по всем пациентам** → [`processed/all_patients.json`](../processed/all_patients.json)
+6. **Сводка по всем пациентам** → [`processed/all_patients.json`](../processed/ru/all_patients.json)
 
 ## Пациенты
 
