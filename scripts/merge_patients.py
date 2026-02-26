@@ -1,43 +1,66 @@
 #!/usr/bin/env python3
-"""Merge all 7 patient analysis.json files into processed/all_patients.json."""
+"""Merge all 7 patient analysis.json files into processed/{lang}/all_patients.json."""
 
+import argparse
 import json
 from pathlib import Path
 
-BASE = Path("/home/liker/projects/ai-research/HyperbolicField-BloodPlasma-Study")
-PROCESSED = BASE / "processed" / "all_patients.json"
+BASE = Path(__file__).resolve().parent.parent
 PATIENT_IDS = [f"{i:02d}" for i in range(1, 8)]
 
-# Top-level fields to preserve from existing all_patients.json
-TOP_LEVEL_KEYS = ["project", "description", "sample_id_format", "sample_types", "camera", "timezone"]
+METADATA = {
+    "ru": {
+        "project": "HyperbolicField-BloodPlasma-Study",
+        "description": "Воздействие гиперболических полевых излучателей на плазму крови",
+        "sample_id_format": "{channel}.{patient}.{number}",
+        "sample_types": {
+            "0": "контроль (без воздействия)",
+            "19": "канал 19",
+            "21": "канал 21",
+        },
+        "camera": "iPhone 16 Pro Max",
+        "timezone": "+02:00",
+    },
+    "en": {
+        "project": "HyperbolicField-BloodPlasma-Study",
+        "description": "Blood plasma exposure to hyperbolic field emitters",
+        "sample_id_format": "{channel}.{patient}.{number}",
+        "sample_types": {
+            "0": "control (no exposure)",
+            "19": "channel 19",
+            "21": "channel 21",
+        },
+        "camera": "iPhone 16 Pro Max",
+        "timezone": "+02:00",
+    },
+}
 
 
 def main():
-    # Read existing all_patients.json for top-level metadata
-    with open(PROCESSED, "r", encoding="utf-8") as f:
-        existing = json.load(f)
+    parser = argparse.ArgumentParser(description="Merge patient analysis.json files")
+    parser.add_argument("--lang", choices=["en", "ru"], default="ru", help="Language version (default: ru)")
+    args = parser.parse_args()
 
-    # Build result with preserved top-level fields
-    result = {k: existing[k] for k in TOP_LEVEL_KEYS if k in existing}
+    lang = args.lang
+    output_path = BASE / "processed" / lang / "all_patients.json"
 
-    # Read all analysis.json files and index by patient_id
-    analyses = {}
+    # Start with top-level metadata for the chosen language
+    result = dict(METADATA[lang])
+
+    # Read all analysis.json files
+    patients = []
     for pid in PATIENT_IDS:
-        path = BASE / "data" / f"patient-{pid}" / "analysis.json"
+        path = BASE / "data" / f"patient-{pid}" / lang / "analysis.json"
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
         assert data["patient_id"] == pid, f"patient_id mismatch in {path}"
-        analyses[pid] = data
-
-    # Build patients array: use analysis.json data entirely for each patient
-    patients = []
-    for pid in PATIENT_IDS:
-        patients.append(analyses[pid])
+        patients.append(data)
 
     result["patients"] = patients
 
     # Write output
-    with open(PROCESSED, "w", encoding="utf-8") as f:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
@@ -50,11 +73,12 @@ def main():
             if "visual_description" in photo:
                 with_desc += 1
 
+    print(f"Lang: {lang}")
     print(f"Patients: {len(patients)}")
     print(f"Total photos: {total_photos}")
     print(f"With visual_description: {with_desc}")
     print(f"Without visual_description: {total_photos - with_desc}")
-    print(f"Output: {PROCESSED}")
+    print(f"Output: {output_path}")
 
 
 if __name__ == "__main__":

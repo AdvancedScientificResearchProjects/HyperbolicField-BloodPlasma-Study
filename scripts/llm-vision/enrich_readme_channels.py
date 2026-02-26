@@ -13,19 +13,19 @@ README_MAP = {
     "IMG_3250": {"samples": ["19.1.1", "21.1.1"], "label": "19.1.1/21.1.1"},
     "IMG_3251": {"samples": ["21.1.1"], "label": "21.1.1"},
     "IMG_3252": {"samples": ["19.1.1"], "label": "19.1.1"},
-    "IMG_3253": {"samples": ["19.1.1", "21.1.1", "0.1.1"], "label": "Сверху вниз: 19.1.1,21.1.1,0.1.1"},
-    "IMG_3254": {"samples": ["0.1.2", "21.1.1", "19.1.1", "0.1.1"], "label": "4 пробирки с этикетками: 0.1.2, 21.1.1, 19.1.1, 0.1..."},
-    "IMG_3255": {"samples": ["21.1.1", "19.1.1", "0.1.1"], "label": "3 пробирки на тёмной поверхности"},
-    "IMG_3256": {"samples": ["21.1.1", "19.1.1", "0.1.1"], "label": "Сверху вниз: 21.1.1,19.1.1,0.1.1"},
-    "IMG_3257": {"samples": ["0.1.1", "19.1.1", "21.1.1"], "label": "Слева направо 0.1.1, 19.1.1,21.1.1"},
-    "IMG_3258": {"samples": ["21.1.1", "0.1.1", "19.1.1"], "label": "Слева направо 21.1.1,0.1.1,19.1.1"},
-    "IMG_3259": {"samples": ["19.1.1", "21.1.1", "0.1.1", "0.1.2"], "label": "Сверху вниз: 19.1.1, 21.1.1, 0.1.1, 0.1.2"},
-    "IMG_3260": {"samples": ["21.1.1", "0.1.1", "19.1.1"], "label": "Слева направо 21.1.1, 0.1.1, 19.1.1"},
-    "IMG_3261": {"samples": ["0.1.1", "21.1.1", "19.1.1"], "label": "Сверху вниз 0.1.1, 21.1.1,19.1.1"},
-    "IMG_3262": {"samples": ["21.1.1", "0.1.1", "19.1.1"], "label": "Слева направо 21.1.1, 0.1.1, 19.1.1"},
+    "IMG_3253": {"samples": ["19.1.1", "21.1.1", "0.1.1"], "label": "Top to bottom: 19.1.1,21.1.1,0.1.1"},
+    "IMG_3254": {"samples": ["0.1.2", "21.1.1", "19.1.1", "0.1.1"], "label": "4 tubes with labels: 0.1.2, 21.1.1, 19.1.1, 0.1..."},
+    "IMG_3255": {"samples": ["21.1.1", "19.1.1", "0.1.1"], "label": "3 tubes on dark surface"},
+    "IMG_3256": {"samples": ["21.1.1", "19.1.1", "0.1.1"], "label": "Top to bottom: 21.1.1,19.1.1,0.1.1"},
+    "IMG_3257": {"samples": ["0.1.1", "19.1.1", "21.1.1"], "label": "Left to right 0.1.1, 19.1.1,21.1.1"},
+    "IMG_3258": {"samples": ["21.1.1", "0.1.1", "19.1.1"], "label": "Left to right 21.1.1,0.1.1,19.1.1"},
+    "IMG_3259": {"samples": ["19.1.1", "21.1.1", "0.1.1", "0.1.2"], "label": "Top to bottom: 19.1.1, 21.1.1, 0.1.1, 0.1.2"},
+    "IMG_3260": {"samples": ["21.1.1", "0.1.1", "19.1.1"], "label": "Left to right 21.1.1, 0.1.1, 19.1.1"},
+    "IMG_3261": {"samples": ["0.1.1", "21.1.1", "19.1.1"], "label": "Top to bottom 0.1.1, 21.1.1,19.1.1"},
+    "IMG_3262": {"samples": ["21.1.1", "0.1.1", "19.1.1"], "label": "Left to right 21.1.1, 0.1.1, 19.1.1"},
 
     # ── Patient-02 ──
-    "IMG_3264": {"samples": [], "label": "(фото протокола / чек-листа)", "notes": "not a sample photo"},
+    "IMG_3264": {"samples": [], "label": "(protocol / checklist photo)", "notes": "not a sample photo"},
     "IMG_3265": {"samples": ["19.2.1"], "label": "19.2.1"},
     "IMG_3266": {"samples": ["19.2.1"], "label": "19.2.1"},
     "IMG_3267": {"samples": ["19.2.2"], "label": "19.2.2"},
@@ -34,17 +34,17 @@ README_MAP = {
     "IMG_3270": {"samples": ["21.2.1"], "label": "21.2.1"},
     "IMG_3271": {"samples": ["21.2.1"], "label": "21.2.1"},
     "IMG_3272": {"samples": ["21.2.2"], "label": "21.2.2"},
-    "IMG_3273": {"samples": [], "label": "(без подписи)", "notes": "3 tubes series 2.1 (19.2.1, 0.2.1, 21.2.1) — inferred from description"},
+    "IMG_3273": {"samples": [], "label": "(no caption)", "notes": "3 tubes series 2.1 (19.2.1, 0.2.1, 21.2.1) — inferred from description"},
     "IMG_3274": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "19.2.1 / 0.2.1 / 21.2.1"},
-    "IMG_3275": {"samples": [], "label": "(без подписи)", "notes": "3 tubes series 2.1 close-up — inferred from description"},
+    "IMG_3275": {"samples": [], "label": "(no caption)", "notes": "3 tubes series 2.1 close-up — inferred from description"},
     "IMG_3276": {"samples": ["19.2.2", "0.2.2", "21.2.2"], "label": "19.2.2 / 0.2.2 / 21.2.2"},
     "IMG_3277": {"samples": ["19.2.2"], "label": "19.2.2"},
     "IMG_3278": {"samples": ["0.2.2"], "label": "0.2.2"},
     "IMG_3279": {"samples": ["21.2.2"], "label": "21.2.2"},
-    "IMG_3280": {"samples": ["21.2.1", "19.2.1", "0.2.1"], "label": "Слева 21, справа 19, снизу 0", "notes": "Petri dish, immediately after"},
-    "IMG_3281": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "Спустя 6 часов", "notes": "Petri dish, +6h"},
-    "IMG_3282": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "Спустя 16 часов", "notes": "Petri dish, +16h"},
-    "IMG_3283": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "Спустя 21 час", "notes": "Petri dish, +21h macro"},
+    "IMG_3280": {"samples": ["21.2.1", "19.2.1", "0.2.1"], "label": "Left 21, right 19, bottom 0", "notes": "Petri dish, immediately after"},
+    "IMG_3281": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "After 6 hours", "notes": "Petri dish, +6h"},
+    "IMG_3282": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "After 16 hours", "notes": "Petri dish, +16h"},
+    "IMG_3283": {"samples": ["19.2.1", "0.2.1", "21.2.1"], "label": "After 21 hours", "notes": "Petri dish, +21h macro"},
     "IMG_3284": {"samples": ["19.2.1"], "label": "19"},
     "IMG_3285": {"samples": ["21.2.1"], "label": "21"},
     "IMG_3286": {"samples": ["0.2.1"], "label": "0"},
@@ -54,75 +54,75 @@ README_MAP = {
     # ── Patient-03 ──
     "IMG_3290": {"samples": ["21.3.1"], "label": "21.3.1"},
     "IMG_3291": {"samples": ["21.3.1"], "label": "21.3.1"},
-    "IMG_3292": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown"},
-    "IMG_3293": {"samples": ["0.3.1"], "label": "0.3.1 (сгустки)"},
+    "IMG_3292": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown"},
+    "IMG_3293": {"samples": ["0.3.1"], "label": "0.3.1 (clots)"},
     "IMG_3294": {"samples": ["0.3.1"], "label": "0.3.1"},
     "IMG_3295": {"samples": ["0.3.2"], "label": "0.3.2"},
     "IMG_3296": {"samples": ["19.3.1"], "label": "19.3.1"},
     "IMG_3297": {"samples": ["19.3.1"], "label": "19.3.1"},
-    "IMG_3298": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown"},
+    "IMG_3298": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown"},
     "IMG_3299": {"samples": ["21.3.1"], "label": "21"},
-    "IMG_3300": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown"},
-    "IMG_3301": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown"},
+    "IMG_3300": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown"},
+    "IMG_3301": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown"},
     "IMG_3302": {"samples": ["19.3.1"], "label": "19"},
-    "IMG_3303": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown"},
-    "IMG_3304": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown"},
+    "IMG_3303": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown"},
+    "IMG_3304": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown"},
     "IMG_3305": {"samples": ["0.3.1", "0.3.2"], "label": "0"},
 
     # ── Patient-04 ──
     "IMG_3307": {"samples": ["0.4.1"], "label": "0.4.1"},
     "IMG_3308": {"samples": ["19.4.1"], "label": "19.4.1"},
     "IMG_3309": {"samples": ["21.4.1"], "label": "21.4.1"},
-    "IMG_3310": {"samples": ["21.4.1", "0.4.1", "19.4.1"], "label": "Сверху вниз 21.4.1/0.4.1/19.4.1"},
+    "IMG_3310": {"samples": ["21.4.1", "0.4.1", "19.4.1"], "label": "Top to bottom 21.4.1/0.4.1/19.4.1"},
 
     # ── Patient-05 ──
-    "IMG_3312": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube on LED"},
-    "IMG_3313": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube in hand"},
-    "IMG_3314": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube macro"},
+    "IMG_3312": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube on LED"},
+    "IMG_3313": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube in hand"},
+    "IMG_3314": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube macro"},
     "IMG_3315": {"samples": ["19.5.1"], "label": "19.5.1"},
-    "IMG_3316": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube on LED"},
-    "IMG_3317": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube macro"},
+    "IMG_3316": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube on LED"},
+    "IMG_3317": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube macro"},
     "IMG_3318": {"samples": ["0.5.1"], "label": "0.5.1"},
-    "IMG_3319": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube in hand"},
-    "IMG_3320": {"samples": [], "label": "(без подписи)", "notes": "single tube, channel unknown; tube on LED"},
+    "IMG_3319": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube in hand"},
+    "IMG_3320": {"samples": [], "label": "(no caption)", "notes": "single tube, channel unknown; tube on LED"},
     "IMG_3321": {"samples": ["21.5.1"], "label": "21.5.1"},
 
     # ── Patient-06 ──
-    "IMG_3323": {"samples": ["21.6.2", "19.6.2"], "label": "Слева 21.6.2, справа 19.6.2"},
-    "IMG_3324": {"samples": ["21.6.2", "0.6.2", "19.6.2", "21.6.1", "0.6.1", "19.6.1"], "label": "Сверху вниз: 21.6.2, 0.6.2, 19.6.2, 21.6.1, 0.6.1, 19.6.1"},
-    "IMG_3325": {"samples": ["21.6.1", "0.6.1", "19.6.1"], "label": "Слева направо: 21.6.1, 0.6.1, 19.6.1"},
+    "IMG_3323": {"samples": ["21.6.2", "19.6.2"], "label": "Left 21.6.2, right 19.6.2"},
+    "IMG_3324": {"samples": ["21.6.2", "0.6.2", "19.6.2", "21.6.1", "0.6.1", "19.6.1"], "label": "Top to bottom: 21.6.2, 0.6.2, 19.6.2, 21.6.1, 0.6.1, 19.6.1"},
+    "IMG_3325": {"samples": ["21.6.1", "0.6.1", "19.6.1"], "label": "Left to right: 21.6.1, 0.6.1, 19.6.1"},
 
     # ── Patient-07 ──
-    "IMG_3327": {"samples": [], "label": "(без подписи)", "notes": "2 tubes, channel unknown"},
-    "IMG_3328": {"samples": ["19.7.1", "21.7.1"], "label": "Слева 19.7.1, справа 21.7.1"},
-    "IMG_3329": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:01:42 near 19.7.1 (20:00:45) → likely ch19"},
-    "IMG_3330": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:01:12 near 19.7.1 (20:00:45) → likely ch19"},
+    "IMG_3327": {"samples": [], "label": "(no caption)", "notes": "2 tubes, channel unknown"},
+    "IMG_3328": {"samples": ["19.7.1", "21.7.1"], "label": "Left 19.7.1, right 21.7.1"},
+    "IMG_3329": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:01:42 near 19.7.1 (20:00:45) → likely ch19"},
+    "IMG_3330": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:01:12 near 19.7.1 (20:00:45) → likely ch19"},
     "IMG_3331": {"samples": ["19.7.1"], "label": "19.7.1"},
-    "IMG_3332": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:03:46 near 19.7.2 (20:02:26) → likely ch19"},
-    "IMG_3333": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:03:37 near 19.7.2 (20:02:26) → likely ch19"},
+    "IMG_3332": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:03:46 near 19.7.2 (20:02:26) → likely ch19"},
+    "IMG_3333": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:03:37 near 19.7.2 (20:02:26) → likely ch19"},
     "IMG_3334": {"samples": ["19.7.2"], "label": "19.7.2"},
-    "IMG_3335": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:06:30 near 21.7.1 (20:06:38) → likely ch21"},
-    "IMG_3336": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:06:22 near 21.7.1 (20:06:38) → likely ch21"},
+    "IMG_3335": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:06:30 near 21.7.1 (20:06:38) → likely ch21"},
+    "IMG_3336": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:06:22 near 21.7.1 (20:06:38) → likely ch21"},
     "IMG_3337": {"samples": ["21.7.1"], "label": "21.7.1"},
-    "IMG_3338": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:05:29 near 21.7.2 (20:05:04) → likely ch21"},
-    "IMG_3339": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:05:16 near 21.7.2 (20:05:04) → likely ch21"},
+    "IMG_3338": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:05:29 near 21.7.2 (20:05:04) → likely ch21"},
+    "IMG_3339": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:05:16 near 21.7.2 (20:05:04) → likely ch21"},
     "IMG_3340": {"samples": ["21.7.2"], "label": "21.7.2"},
-    "IMG_3341": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:09:55 near 0.7.1 (20:10:01) → likely control"},
-    "IMG_3342": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:09:35 near 0.7.1/0.7.2 → likely control"},
-    "IMG_3343": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:09:41 near 0.7.1 (20:10:01) → likely control"},
+    "IMG_3341": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:09:55 near 0.7.1 (20:10:01) → likely control"},
+    "IMG_3342": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:09:35 near 0.7.1/0.7.2 → likely control"},
+    "IMG_3343": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:09:41 near 0.7.1 (20:10:01) → likely control"},
     "IMG_3344": {"samples": ["0.7.1"], "label": "0.7.1"},
-    "IMG_3345": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:09:06 near 0.7.2 (20:07:58) → likely control"},
-    "IMG_3346": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:08:06 near 0.7.2 (20:07:58) → likely control"},
-    "IMG_3347": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:07:48 near 0.7.2 (20:07:58) → likely control"},
-    "IMG_3348": {"samples": [], "label": "(без подписи)", "notes": "1 tube; EXIF 20:08:19 near 0.7.2 (20:07:58) → likely control"},
+    "IMG_3345": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:09:06 near 0.7.2 (20:07:58) → likely control"},
+    "IMG_3346": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:08:06 near 0.7.2 (20:07:58) → likely control"},
+    "IMG_3347": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:07:48 near 0.7.2 (20:07:58) → likely control"},
+    "IMG_3348": {"samples": [], "label": "(no caption)", "notes": "1 tube; EXIF 20:08:19 near 0.7.2 (20:07:58) → likely control"},
     "IMG_3349": {"samples": ["0.7.2"], "label": "0.7.2"},
-    "IMG_3350": {"samples": [], "label": "(без подписи)", "notes": "3 tubes, channel assignment unknown"},
-    "IMG_3351": {"samples": [], "label": "(без подписи)", "notes": "3 tubes, channel assignment unknown"},
-    "IMG_3352": {"samples": ["0.7.1", "0.7.2", "19.7.1", "19.7.2", "21.7.1", "21.7.2"], "label": "Слева направо 0,19,21"},
-    "IMG_3353": {"samples": [], "label": "(без подписи)", "notes": "2 tubes, channel assignment unknown"},
-    "IMG_3354": {"samples": [], "label": "(без подписи)", "notes": "2 tubes, channel assignment unknown"},
-    "IMG_3355": {"samples": [], "label": "(без подписи)", "notes": "2 tubes, channel assignment unknown"},
-    "IMG_3356": {"samples": ["19.7.1", "19.7.2", "21.7.1", "21.7.2"], "label": "Слева/снизу 19, справа/сверху 21"},
+    "IMG_3350": {"samples": [], "label": "(no caption)", "notes": "3 tubes, channel assignment unknown"},
+    "IMG_3351": {"samples": [], "label": "(no caption)", "notes": "3 tubes, channel assignment unknown"},
+    "IMG_3352": {"samples": ["0.7.1", "0.7.2", "19.7.1", "19.7.2", "21.7.1", "21.7.2"], "label": "Left to right 0,19,21"},
+    "IMG_3353": {"samples": [], "label": "(no caption)", "notes": "2 tubes, channel assignment unknown"},
+    "IMG_3354": {"samples": [], "label": "(no caption)", "notes": "2 tubes, channel assignment unknown"},
+    "IMG_3355": {"samples": [], "label": "(no caption)", "notes": "2 tubes, channel assignment unknown"},
+    "IMG_3356": {"samples": ["19.7.1", "19.7.2", "21.7.1", "21.7.2"], "label": "Left/bottom 19, right/top 21"},
 }
 
 # ── Patient-07 temporal inference map ──
@@ -325,9 +325,9 @@ def _assign_tube_channels(photo, readme_info):
     # "Слева направо: 21.6.1, 0.6.1, 19.6.1" → left=21, center=0, right=19
     # "Сверху вниз: 19.1.1,21.1.1,0.1.1" → top=19, center=21, bottom=0
     positions = []
-    if "Слева направо" in label or "Слева" in label:
+    if "Слева направо" in label or "Left to right" in label or "Слева" in label or "Left" in label:
         positions = samples  # left to right order
-    elif "Сверху вниз" in label:
+    elif "Сверху вниз" in label or "Top to bottom" in label:
         positions = samples  # top to bottom order
 
     if positions and len(positions) == len(tubes):
@@ -476,7 +476,7 @@ def write_report(enriched, stats):
         unclass_patients[p.get("patient", "unknown")] += 1
     for pat, cnt in sorted(unclass_patients.items()):
         report.append(f"  - {pat}: {cnt} photos")
-    report.append("- These are single-tube photos marked '(без подписи)' in the protocol")
+    report.append("- These are single-tube photos marked '(no caption)' in the protocol")
     report.append("")
 
     # ── Per-photo details: inferred ──
