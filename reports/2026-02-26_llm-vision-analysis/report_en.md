@@ -106,6 +106,8 @@ Photos were processed in 14 batches of 6–7 photos each (3 batches in parallel)
 | Stage: full_coagulation | 3 | 3 | 3 |
 | Stage: lysis | 0 | **1** | 0 |
 
+![Clot Frequency by Channel](https://raw.githubusercontent.com/AdvancedScientificResearchProjects/HyperbolicField-BloodPlasma-Study/main/reports/2026-02-26_llm-vision-analysis/chart_clot_frequency.png)
+
 ### 3.3. Stage Distribution Analysis
 
 **Ch19 (acceleration)**: Skewed toward advanced stages. 22% of photos show full_coagulation or lysis (4 out of 18). Includes the only observed lysis case.
@@ -113,6 +115,8 @@ Photos were processed in 14 batches of 6–7 photos each (3 batches in parallel)
 **Control**: Dominated by partial_clot (40%, 8 of 20). Typical gradual coagulation progression. No lysis.
 
 **Ch21 (deceleration)**: Bimodal distribution — either no visible coagulation (35%) or early_fibrin (41%). Only 1 partial_clot out of 17. When full coagulation occurs (poured samples), it is dense and opaque.
+
+![Stage Distribution by Channel](https://raw.githubusercontent.com/AdvancedScientificResearchProjects/HyperbolicField-BloodPlasma-Study/main/reports/2026-02-26_llm-vision-analysis/chart_stage_distribution.png)
 
 ### 3.4. Multi-Channel Comparison Photos (34 photos, 75 tubes)
 
@@ -161,6 +165,8 @@ Patient-02 ch19 shows the complete coagulation lifecycle:
 
 No other channel shows progression beyond `full_coagulation`.
 
+![Patient-02 Ch19 Lifecycle](https://raw.githubusercontent.com/AdvancedScientificResearchProjects/HyperbolicField-BloodPlasma-Study/main/reports/2026-02-26_llm-vision-analysis/chart_lifecycle.png)
+
 ### 4.3. Ch21: Delayed but Dense Coagulation
 
 Ch21 exhibits a distinctive pattern:
@@ -208,6 +214,10 @@ This series demonstrates visible coagulation progression over 21 hours under ide
 
 Patient-07 provides the strongest per-patient evidence with 15 inferred photos confirming the gradient: ch19 100% clots, control 71%, ch21 0%.
 
+![Per-Patient Heatmap](https://raw.githubusercontent.com/AdvancedScientificResearchProjects/HyperbolicField-BloodPlasma-Study/main/reports/2026-02-26_llm-vision-analysis/chart_patient_heatmap.png)
+
+![Patient-07 Gradient](https://raw.githubusercontent.com/AdvancedScientificResearchProjects/HyperbolicField-BloodPlasma-Study/main/reports/2026-02-26_llm-vision-analysis/chart_patient07_gradient.png)
+
 ---
 
 ## 5. Comparison with Other Methods
@@ -218,6 +228,8 @@ Patient-07 provides the strongest per-patient evidence with 15 inferred photos c
 | **CV segment analysis** (SAM-2 + HSV) | 95%+ false positive rate | Glass tube walls detected as plasma; IoU = 48% |
 | **CV clot detection** | Control: 8.9 clots, Ch19: 5.6, Ch21: 8.7 | Counter-intuitive results; detects glass artifacts |
 | **LLM Vision** (this report) | Ch19 78% > Control 65% > Ch21 41% | Only method correctly differentiating stages |
+
+![Method Comparison](https://raw.githubusercontent.com/AdvancedScientificResearchProjects/HyperbolicField-BloodPlasma-Study/main/reports/2026-02-26_llm-vision-analysis/chart_method_comparison.png)
 
 LLM Vision is currently the only validated approach for coagulation stage classification in this dataset. Traditional CV methods fail due to glass transparency and plasma optical similarity. Zero-shot CLIP models lack domain-specific training for plasma coagulation stages.
 
@@ -366,7 +378,6 @@ Photos with no protocol label and no channel inference available.
 | 1.0 | 2026-02-26 | Initial analysis of 40 labeled single-channel photos |
 | **2.0** | **2026-02-26** | **Full 101-photo analysis. README enrichment for channel assignment. EXIF temporal inference for patient-07. Per-patient analysis. Comparison with CV/ML methods.** |
 | 3.0 | planned | Multi-LLM comparison (ChatGPT-4o, Gemini Pro Vision) |
-| 4.0 | planned | Human expert review + inter-validator agreement scoring |
 
 ---
 
