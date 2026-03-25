@@ -129,9 +129,11 @@
    - Example: `✅ Uploaded / Загружено`
 
 3. **✅ ALL links DIRECT to files / ВСЕ ссылки ПРЯМЫЕ на файлы**
-   - Format: `[📄 View PDF](https://github.com/.../blob/main/path/to/file.pdf)`
-   - NOT: `[📄 View PDF](payment-receipts/)` ← leads to folder, not file!
-   - MUST lead to actual file, not folder!
+   - Format: `[📄 PDF](https://github.com/.../blob/main/path/to/FILENAME.EXT)`
+   - **❌ NEVER link to folder:** `[📄 PDF](docs/drawings/)` ← WRONG! Leads to folder listing!
+   - **✅ ALWAYS link to specific file:** `[📄 PDF](https://github.com/.../blob/main/docs/drawings/2025-09-20_Figure1_KZ2025-0914.1_v1.pdf)` ← CORRECT!
+   - **MUST include FULL filename with extension** / ДОЛЖЕН включать ПОЛНОЕ имя файла с расширением
+   - **MUST lead to actual file, not folder!** / ДОЛЖЕН вести на實際ный файл, а не папку!
 
 4. **✅ Mermaid diagrams included / Диаграммы Mermaid включены**
    - `sequenceDiagram` for correspondence flow / sequenceDiagram для потока переписки
@@ -148,10 +150,13 @@
 ❌ | Document | Link |
    ^ Only English!
 
-❌ [📄 View PDF](payment-receipts/)
-   ^ Leads to folder, not file!
+❌ [📄 PDF](docs/drawings/)
+   ^ Leads to FOLDER, not file! User sees folder listing!
 
-❌ [📄 View PDF](https://github.com/.../issues/5)
+❌ [📄 PDF](https://github.com/.../tree/main/docs/drawings)
+   ^ Leads to FOLDER (tree), not file (blob)!
+
+❌ [📄 PDF](https://github.com/.../issues/5)
    ^ Leads back to same issue, circular link!
 ```
 
@@ -160,9 +165,22 @@
 ```markdown
 ✅ | Document Type / Тип Документа | Direct Link / Прямая Ссылка |
 
-✅ [📄 View PDF](https://github.com/denisbanchenko/Kazpatent_Inspira-X_Respiratory_Analysis_Patent/blob/main/payment-receipts/2025-09-17_Payment_KZ2025-0914.1_FilingFee_6096.16KZT_EPAY934135.pdf)
-   ^ Direct link to actual PDF file!
+✅ [📄 PDF](https://github.com/denisbanchenko/Kazpatent_Inspira-X_Respiratory_Analysis_Patent/blob/main/docs/drawings/2025-09-20_Figure1_KZ2025-0914.1_v1.pdf)
+   ^ Direct link to ACTUAL PDF file with FULL filename!
+
+✅ [🇬🇧 EN](https://github.com/denisbanchenko/Kazpatent_Inspira-X_Respiratory_Analysis_Patent/blob/main/translations/2025-11-17_FormalExamQuery_EN_RU.md)
+   ^ Direct link to ACTUAL translation file with FULL filename!
 ```
+
+**⚠️ CRITICAL CHECKLIST / КРИТИЧЕСКИЙ КОНТРОЛЬНЫЙ СПИСОК:**
+
+Before publishing ANY Issue table with links / Перед публикацией ЛЮБОЙ таблицы Issue со ссылками:
+
+- [ ] **Click EVERY link / Кликни КАЖДУЮ ссылку**
+- [ ] **Verify it opens PDF/DOCX file / Проверь что открывается PDF/DOCX файл**
+- [ ] **NOT a folder listing / НЕ список папки**
+- [ ] **NOT back to same issue / НЕ возврат к тому же issue**
+- [ ] **FULL filename visible / ПОЛНОЕ имя файла видно** (e.g., `2025-09-20_Figure1_KZ2025-0914.1_v1.pdf`)
 
 ---
 
