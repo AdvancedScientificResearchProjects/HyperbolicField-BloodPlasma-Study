@@ -112,7 +112,139 @@
 
 ---
 
+### ⚠️ ABSOLUTE RULE #5: DOCUMENT NAMING CONVENTION / АБСОЛЮТНОЕ ПРАВИЛО №5: КОНВЕНЦИЯ ИМЕНОВАНИЯ ДОКУМЕНТОВ
+
+**ALL documents MUST follow chronological naming convention / ВСЕ документы ДОЛЖНЫ следовать хронологической конвенции именования**
+
+**Format / Формат:**
+```
+YYYY-MM-DD_DocumentType_ApplicationNumber_Version_Description_Language.ext
+```
+
+**Where / Где:**
+- `YYYY-MM-DD` = Filing date / Дата подачи
+- `DocumentType` = Application, Description, Claims, Abstract, Figure, Payment, Incoming, Outgoing / Тип документа
+- `ApplicationNumber` = KZ380648, KZ413554, PCT412362, etc. / Номер заявки
+- `Version` = v1_Original, v2_Revised, v2_Final, v1_Editable / Версия
+- `Description` = Brief description / Краткое описание
+- `Language` = RU, EN, KZ, RU_EN / Язык
+- `ext` = pdf, docx, doc / Расширение
+
+**✅ CORRECT EXAMPLES FROM ASRP.art / ПРАВИЛЬНЫЕ ПРИМЕРЫ ИЗ ASRP.art:**
+
+```
+✅ 2025-06-20_Application_KZ380648_v1_Original_RU.pdf
+✅ 2025-09-15_Description_KZ380648_v2_Final_RU.pdf
+✅ 2026-03-07_Description_PCT412362_v1_Editable_RU.docx
+✅ 2025-11-08_Application_KZ2025-1095.1_v1_Original_RU.pdf
+✅ 2026-01-06_Incoming_KZ2025-1095.1_FormalExamQuery_Barcode3805316.pdf
+✅ 2026-03-18_Outgoing_KZ2025-1095.1_ResponseToFormalExam_Barcode3900449.pdf
+```
+
+**❌ WRONG EXAMPLES / НЕПРАВИЛЬНЫЕ ПРИМЕРЫ:**
+
+```
+❌ OpisanieSynchroV1.docx           ← No date, no application number
+❌ FormulaSynchroV1.docx            ← No date, no application number
+❌ ReferatSynchroV1.docx            ← No date, no application number
+❌ Figure1SynchroV1.pdf             ← No date, no application number
+❌ 2026-03-24_Description.docx      ← No application number, no version
+❌ Application.pdf                   ← No date, no application number, no version
+```
+
+**⚠️ CRITICAL CHECKLIST / КРИТИЧЕСКИЙ КОНТРОЛЬНЫЙ СПИСОК:**
+
+Before uploading ANY document / Перед загрузкой ЛЮБОГО документа:
+
+- [ ] **Filename starts with date / Имя файла начинается с даты** (YYYY-MM-DD)
+- [ ] **DocumentType clearly identified / Тип документа четко определен** (Application, Description, Claims, etc.)
+- [ ] **ApplicationNumber included / Номер заявки включен** (KZ413554, etc.)
+- [ ] **Version specified / Версия указана** (v1_Original, v2_Final, etc.)
+- [ ] **Language specified / Язык указан** (RU, EN, KZ)
+- [ ] **File extension correct / Расширение файла правильное** (.pdf, .docx, .doc)
+
+**📋 VERSION CODES / КОДЫ ВЕРСИЙ:**
+
+| Version Code / Код Версии | Meaning / Значение | When to Use / Когда Использовать |
+|--------------------------|-------------------|----------------------------------|
+| `v1_Original` | Original filing / Оригинальная подача | First submission / Первая подача |
+| `v2_Revised` | Revised / Исправлено | After formal exam query / После запроса ФЭ |
+| `v2_Final` | Final / Финал | Final version after corrections / Финальная версия после исправлений |
+| `v1_Editable` | Editable / Редактируемый | Editable version (docx) / Редактируемая версия |
+
+---
+
 ### ⚠️ ABSOLUTE RULE #4.1: ISSUE TABLE BILINGUAL REQUIREMENTS / АБСОЛЮТНОЕ ПРАВИЛО №4.1: ТРЕБОВАНИЯ К ДВУЯЗЫЧНЫМ ТАБЛИЦАМ В ISSUE
+
+**EVERY Issue MUST have:**
+**КАЖДЫЙ Issue ДОЛЖЕН ИМЕТЬ:**
+
+1. **✅ ALL table headers bilingual / ВСЕ заголовки таблиц двуязычные**
+   - Format: `English / Русский`
+   - Example: `Document Type / Тип Документа`
+   - Example: `Status / Статус`
+   - Example: `Direct Link / Прямая Ссылка`
+
+2. **✅ ALL status values bilingual / ВСЕ значения статуса двуязычные**
+   - Example: `✅ Paid / Оплачено`
+   - Example: `⏳ Pending / Ожидается`
+   - Example: `✅ Uploaded / Загружено`
+
+3. **✅ ALL links DIRECT to files / ВСЕ ссылки ПРЯМЫЕ на файлы**
+   - Format: `[📄 PDF](https://github.com/.../blob/main/path/to/FILENAME.EXT)`
+   - **❌ NEVER link to folder:** `[📄 PDF](docs/drawings/)` ← WRONG! Leads to folder listing!
+   - **✅ ALWAYS link to specific file:** `[📄 PDF](https://github.com/.../blob/main/docs/drawings/2025-09-20_Figure1_KZ2025-0914.1_v1.pdf)` ← CORRECT!
+   - **MUST include FULL filename with extension** / ДОЛЖЕН включать ПОЛНОЕ имя файла с расширением
+   - **MUST lead to actual file, not folder!** / ДОЛЖЕН вести на фактический файл, а не папку!
+
+4. **✅ Mermaid diagrams included / Диаграммы Mermaid включены**
+   - `sequenceDiagram` for correspondence flow / sequenceDiagram для потока переписки
+   - `timeline` for payment/timeline / timeline для платежей/временной шкалы
+   - `flowchart` for process flow / flowchart для процесса
+
+5. **✅ Corporate contact info / Корпоративная контактная информация**
+   - Email: info@asrp.tech (NOT personal email!)
+   - Company: ТОО "Перспективные Научно-Исследовательские Разработки"
+
+**❌ WRONG EXAMPLES / НЕПРАВИЛЬНЫЕ ПРИМЕРЫ:**
+
+```markdown
+❌ | Document | Link |
+   ^ Only English!
+
+❌ [📄 PDF](docs/drawings/)
+   ^ Leads to FOLDER, not file! User sees folder listing!
+
+❌ [📄 PDF](https://github.com/.../tree/main/docs/drawings)
+   ^ Leads to FOLDER (tree), not file (blob)!
+
+❌ [📄 PDF](https://github.com/.../issues/5)
+   ^ Leads back to same issue, circular link!
+```
+
+**✅ CORRECT EXAMPLES / ПРАВИЛЬНЫЕ ПРИМЕРЫ:**
+
+```markdown
+✅ | Document Type / Тип Документа | Direct Link / Прямая Ссылка |
+
+✅ [📄 PDF](https://github.com/denisbanchenko/Kazpatent_Inspira-X_Respiratory_Analysis_Patent/blob/main/docs/drawings/2025-09-20_Figure1_KZ2025-0914.1_v1.pdf)
+   ^ Direct link to ACTUAL PDF file with FULL filename!
+
+✅ [🇬🇧 EN](https://github.com/denisbanchenko/Kazpatent_Inspira-X_Respiratory_Analysis_Patent/blob/main/translations/2025-11-17_FormalExamQuery_EN_RU.md)
+   ^ Direct link to ACTUAL translation file with FULL filename!
+```
+
+**⚠️ CRITICAL CHECKLIST / КРИТИЧЕСКИЙ КОНТРОЛЬНЫЙ СПИСОК:**
+
+Before publishing ANY Issue table with links / Перед публикацией ЛЮБОЙ таблицы Issue со ссылками:
+
+- [ ] **Click EVERY link / Кликни КАЖДУЮ ссылку**
+- [ ] **Verify it opens PDF/DOCX file / Проверь что открывается PDF/DOCX файл**
+- [ ] **NOT a folder listing / НЕ список папки**
+- [ ] **NOT back to same issue / НЕ возврат к тому же issue**
+- [ ] **FULL filename visible / ПОЛНОЕ имя файла видно** (e.g., `2025-09-20_Figure1_KZ2025-0914.1_v1.pdf`)
+
+---
 
 **EVERY Issue MUST have:**
 **КАЖДЫЙ Issue ДОЛЖЕН ИМЕТЬ:**
