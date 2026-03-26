@@ -167,9 +167,9 @@ flowchart LR
 |------------------------|-------------------------|----------------------------|
 | **Raw Biochemical Data / Сырые Биохимические Данные** | `data/biochemical/` | [📂 View](data/biochemical/) |
 | **Processed Data / Обработанные Данные** | `processed/biochemical/` | [📂 View](processed/biochemical/) |
-| **Analysis Scripts / Скрипты Анализа** | `scripts/biochemical_analysis.py` | [📄 View](scripts/biochemical_analysis.py) |
+| **Analysis Scripts / Скрипты Анализа** | `scripts/biochemical_analysis.py` | [📄 View](original_research/scripts/biochemical_analysis.py) |
 | **Results / Результаты** | `results/biochemical/` | [📂 View](results/biochemical/) |
-| **Reports / Отчёты** | `reports/biochemical_integration/` | [📂 View](reports/biochemical_integration/) |
+| **Reports / Отчёты** | `reports/biochemical_integration/` | [📂 View](original_research/reports/biochemical_integration/) |
 
 ### РУССКИЙ
 
@@ -179,9 +179,9 @@ flowchart LR
 |-----------|-------------|--------------|
 | **Сырые Биохимические Данные** | `data/biochemical/` | [📂 Просмотр](data/biochemical/) |
 | **Обработанные Данные** | `processed/biochemical/` | [📂 Просмотр](processed/biochemical/) |
-| **Скрипты Анализа** | `scripts/biochemical_analysis.py` | [📄 Просмотр](scripts/biochemical_analysis.py) |
+| **Скрипты Анализа** | `scripts/biochemical_analysis.py` | [📄 Просмотр](original_research/scripts/biochemical_analysis.py) |
 | **Результаты** | `results/biochemical/` | [📂 Просмотр](results/biochemical/) |
-| **Отчёты** | `reports/biochemical_integration/` | [📂 Просмотр](reports/biochemical_integration/) |
+| **Отчёты** | `reports/biochemical_integration/` | [📂 Просмотр](original_research/reports/biochemical_integration/) |
 
 ---
 
@@ -225,8 +225,8 @@ flowchart LR
 
 | # | Report / Отчёт | Date / Дата | Status / Статус | Direct Link / Прямая Ссылка |
 |---|----------------|-------------|-----------------|----------------------------|
-| 1 | **🧪 Biochemical Analysis Protocol / Протокол Биохимического Анализа** | 2026-03 | 🟡 In Progress | [🇬🇧 EN](reports/biochemical_protocol_en.md) \| [🇷🇺 RU](reports/biochemical_protocol_ru.md) |
-| 2 | **📊 Correlation Analysis / Корреляционный Анализ** | 2026-03 | 🟡 In Progress | [🇬🇧 EN](reports/correlation_analysis_en.md) \| [🇷🇺 RU](reports/correlation_analysis_ru.md) |
+| 1 | **🧪 Biochemical Analysis Protocol / Протокол Биохимического Анализа** | 2026-03 | 🟡 In Progress | [🇬🇧 EN](original_research/reports/biochemical_protocol_en.md) \| [🇷🇺 RU](original_research/reports/biochemical_protocol_ru.md) |
+| 2 | **📊 Correlation Analysis / Корреляционный Анализ** | 2026-03 | 🟡 In Progress | [🇬🇧 EN](original_research/reports/correlation_analysis_en.md) \| [🇷🇺 RU](original_research/reports/correlation_analysis_ru.md) |
 
 ---
 
