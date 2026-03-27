@@ -331,7 +331,7 @@ flowchart TD
 
 | Issue # | Title / Название | Status / Статус | Priority / Приоритет | Assignees / Исполнители |
 |---------|------------------|-----------------|---------------------|-------------------------|
-| [#9](https://github.com/AdvancedScientificResearchProjects/Hyperbolic_Field_BloodPlasma_Study/issues/9) | 🔗 PATENT APPLICATION: FRACTAL BIOMEDICAL (KZ 2025/1095.1) | 🟡 Open | 🔴 Critical | Denis Banchenko |
+| [#9](https://github.com/AdvancedScientificResearchProjects/Hyperbolic_Field_BloodPlasma_Study/issues/9) | 🔗 PATENT APPLICATION: FRACTAL BIOMEDICAL (KZ 2025/1095.1) | 🟡 Open | 🔴 Critical | Valeria Ovseannicova, Denis Banchenko, Mykhailo Kapustin |
 | [#8](https://github.com/AdvancedScientificResearchProjects/Hyperbolic_Field_BloodPlasma_Study/issues/8) | 📑 PEER REVIEW PUBLICATION PREPARATION / ПОДГОТОВКА НАУЧНОЙ СТАТЬИ | 🟡 Open | 🔴 High | Ivan Savelyev |
 | [#7](https://github.com/AdvancedScientificResearchProjects/Hyperbolic_Field_BloodPlasma_Study/issues/7) | 🙈 BLIND ANALYSIS PROTOCOL / ПРОТОКОЛ ОСЛЕПЛЕНИЯ | 🟡 Open | 🟡 Medium | Kyryl Zmiienko |
 | [#6](https://github.com/AdvancedScientificResearchProjects/Hyperbolic_Field_BloodPlasma_Study/issues/6) | 📷 TIME-LAPSE PHOTOGRAPHY SYSTEM / СИСТЕМА ПОКАДРОВОЙ СЪЁМКИ | 🟡 Open | 🟡 Medium | Valeria Ovseannicova, Kyryl Zmiienko |
