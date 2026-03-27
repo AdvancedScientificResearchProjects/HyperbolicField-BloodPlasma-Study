@@ -35,53 +35,103 @@ pie title Total Photos by Patient / Всего Фото по Пациентам
 
 ---
 
-## ⏰ CHANNEL EXPLANATION / ОБЪЯСНЕНИЕ КАНАЛОВ
+## 📈 COMPREHENSIVE CHANNEL METRICS / ВСЕСТОРОННИЕ МЕТРИКИ КАНАЛОВ
 
-### Basic Channel Effects / Базовые Эффекты Каналов
+### Clot Count & Density / Количество и Плотность Сгустков
 
 ```mermaid
-flowchart LR
-    A[🩸 Plasma Samples<br/>Образцы Плазмы] --> B[⏸️ Control<br/>Контроль<br/>No exposure<br/>Без воздействия]
-    A --> C[⏩ Channel 19<br/>Канал 19<br/>Time Acceleration<br/>Ускорение Времени]
-    A --> D[⏪ Channel 21<br/>Канал 21<br/>Time Deceleration<br/>Замедление Времени]
-    
-    B --> E[📊 Normal coagulation<br/>Нормальное свёртывание<br/>~8-9 clots / ~8-9 сгустков]
-    C --> F[📉 Accelerated aging<br/>Ускоренное старение<br/>~5-6 clots / ~5-6 сгустков<br/>−37% count / −37% кол-во]
-    D --> G[📈 Delayed coagulation<br/>Замедленное свёртывание<br/>~8-9 clots / ~8-9 сгустков<br/>Dense formation / Плотное]
-    
-    style B fill:#5fcdff
-    style C fill:#ff9ff3
-    style D fill:#54a0ff
-    style E fill:#5fcdff
-    style F fill:#ff9ff3
-    style G fill:#54a0ff
+barChart
+    title Clot Count by Channel (CV Analysis) / Количество Сгустков по Каналам (CV Анализ)
+    x-axis "Channel / Канал"
+    y-axis "Mean Clot Count / Среднее Количество"
+    bar "⏸️ Control\n8.92" : 8.92
+    bar "⏩ Channel 19\n5.64 (−37%)" : 5.64
+    bar "⏪ Channel 21\n8.69 (−3%)" : 8.69
 ```
 
-### Detailed Channel Effects / Детальные Эффекты Каналов
+### Clot Area Percentage / Процент Площади Сгустков
+
+```mermaid
+barChart
+    title Total Clot Area (% of sample) / Общая Площадь Сгустков (% от образца)
+    x-axis "Channel / Канал"
+    y-axis "Area % / Площадь %"
+    bar "⏸️ Control\n0.90%" : 0.90
+    bar "⏩ Ch19\n0.52% (−42%)" : 0.52
+    bar "⏪ Ch21\n0.58% (−35%)" : 0.58
+```
+
+### Texture Analysis (GLCM Contrast) / Текстурный Анализ (Контраст GLCM)
+
+```mermaid
+barChart
+    title GLCM Texture Contrast / Текстурный Контраст GLCM
+    x-axis "Channel / Канал"
+    y-axis "Contrast Value / Значение Контраста"
+    bar "⏸️ Control\n4.12" : 4.12
+    bar "⏩ Ch19\n5.26 (+28%)" : 5.26
+    bar "⏪ Ch21\n4.16 (+1%)" : 4.16
+```
+
+### Edge Density / Плотность Краёв
+
+```mermaid
+barChart
+    title Edge Density (Canny) / Плотность Краёв (Кэнни)
+    x-axis "Channel / Канал"
+    y-axis "Edge Density / Плотность"
+    bar "⏸️ Control\n0.0016" : 0.0016
+    bar "⏩ Ch19\n0.0012 (−25%)" : 0.0012
+    bar "⏪ Ch21\n0.0034 (+113%)" : 0.0034
+```
+
+### LLM Clot Detection Rate / Частота Обнаружения Сгустков (LLM)
+
+```mermaid
+barChart
+    title Clot Detection Rate (LLM Vision) / Частота Обнаружения Сгустков (LLM Зрение)
+    x-axis "Channel / Канал"
+    y-axis "Detection Rate % / Процент Обнаружения %"
+    bar "⏸️ Control\n65%" : 65
+    bar "⏩ Ch19\n78%" : 78
+    bar "⏪ Ch21\n41%" : 41
+```
+
+---
+
+## ⏰ TIME DISTORTION EFFECTS / ЭФФЕКТЫ ИСКАЖЕНИЯ ВРЕМЕНИ
+
+### Complete Effect Summary / Полная Сводка Эффектов
 
 ```mermaid
 flowchart TB
-    subgraph Control["⏸️ Control / Контроль"]
-        C1[Clot Count: 8.92<br/>Количество Сгустков: 8.92]
-        C2[Clot Area: 0.90%<br/>Площадь Сгустков: 0.90%]
-        C3[Texture: Normal<br/>Текстура: Норма]
-        C4[No lysis<br/>Без лизиса]
+    subgraph Control["⏸️ Control / Контроль<br/>BASELINE / БАЗОВЫЙ УРОВЕНЬ"]
+        C1["📊 Clot Count: 8.92<br/>Количество: 8.92"]
+        C2["📏 Area: 0.90%<br/>Площадь: 0.90%"]
+        C3["🔍 Texture: 4.12<br/>Текстура: 4.12"]
+        C4["📐 Edge Density: 0.0016<br/>Плотность Краёв"]
+        C5["👁️ LLM Detection: 65%<br/>Обнаружение LLM"]
+        C6["⏱️ Time Flow: NORMAL<br/>Поток Времени: НОРМА"]
     end
     
     subgraph Ch19["⏩ Channel 19 / Канал 19<br/>TIME ACCELERATION / УСКОРЕНИЕ ВРЕМЕНИ"]
-        A1[Clot Count: 5.64 🔻<br/>−37% vs control<br/>−37% к контролю]
-        A2[Clot Area: 0.52% 🔻<br/>−42% vs control<br/>−42% к контролю]
-        A3[Texture: +28% contrast<br/>Текстура: +28% контраст]
-        A4[✨ 1 lysis case<br/>1 случай лизиса]
-        A5[Samples appear OLDER<br/>Образцы выглядят СТАРШЕ]
+        A1["📊 Clot Count: 5.64 🔻<br/>−37% vs control<br/>−37% к контролю"]
+        A2["📏 Area: 0.52% 🔻<br/>−42% vs control<br/>−42% к контролю"]
+        A3["🔍 Texture: 5.26 🔺<br/>+28% contrast<br/>+28% контраст"]
+        A4["📐 Edge Density: 0.0012 🔻<br/>−25% vs control<br/>−25% к контролю"]
+        A5["👁️ LLM Detection: 78% 🔺<br/>+13 pp vs control<br/>+13 п.п."]
+        A6["✨ LYSIS CASE<br/>СЛУЧАЙ ЛИЗИСА<br/>Only in Ch19<br/>Только в Ch19"]
+        A7["⏱️ Time Flow: ACCELERATED<br/>Samples age FASTER<br/>Образцы стареют БЫСТРЕЕ"]
     end
     
     subgraph Ch21["⏪ Channel 21 / Канал 21<br/>TIME DECELERATION / ЗАМЕДЛЕНИЕ ВРЕМЕНИ"]
-        D1[Clot Count: 8.69<br/>−3% vs control<br/>−3% к контролю]
-        D2[Clot Area: 0.58% 🔻<br/>−35% vs control<br/>−35% к контролю]
-        D3[Texture: +1% contrast<br/>Текстура: +1% контраст]
-        D4[No lysis<br/>Без лизиса]
-        D5[Samples appear YOUNGER<br/>Образцы выглядят МОЛОЖЕ]
+        D1["📊 Clot Count: 8.69<br/>−3% vs control<br/>−3% к контролю"]
+        D2["📏 Area: 0.58% 🔻<br/>−35% vs control<br/>−35% к контролю"]
+        D3["🔍 Texture: 4.16<br/>+1% contrast<br/>+1% контраст"]
+        D4["📐 Edge Density: 0.0034 🔺<br/>+113% vs control<br/>+113% к контролю"]
+        D5["👁️ LLM Detection: 41% 🔻<br/>−24 pp vs control<br/>−24 п.п."]
+        D6["⏱️ Time Flow: DECELERATED<br/>Samples age SLOWER<br/>Образцы стареют МЕДЛЕННЕЕ"]
+        D7["🧊 Dense formation<br/>Плотное образование<br/>Delayed onset<br/>Замедленное начало"]
     end
     
     style Control fill:#5fcdff
@@ -89,34 +139,20 @@ flowchart TB
     style Ch21 fill:#54a0ff
 ```
 
----
-
-## 📈 COMPARATIVE ANALYSIS / СРАВНИТЕЛЬНЫЙ АНАЛИЗ
-
-### Clot Metrics Comparison / Сравнение Метрик Сгустков
+### Abstract Time-Clot Relationship / Абстрактная Связь Время-Сгустки
 
 ```mermaid
-xyChart-beta
-    title "Clot Analysis: Channel Effects / Анализ Сгустков: Эффекты Каналов"
-    x-axis ["Control<br/>Контроль", "Channel 19<br/>Канал 19<br/>⏩ Acceleration", "Channel 21<br/>Канал 21<br/>⏪ Deceleration"]
-    y-axis "Relative Value / Относительное Значение" 0 --> 10
-    bar [8.92, 5.64, 8.69]
-    line [8.92, 5.64, 8.69]
-```
-
-### Effect Magnitude / Величина Эффекта
-
-```mermaid
-barChart-beta
-    title "Effect Magnitude by Channel / Величина Эффекта по Каналам"
-    x-axis "Parameter / Параметр"
-    y-axis "Change vs Control / Изменение к Контролю %"
-    bar "Ch19 Count<br/>−37%" : -37
-    bar "Ch19 Area<br/>−42%" : -42
-    bar "Ch21 Count<br/>−3%" : -3
-    bar "Ch21 Area<br/>−35%" : -35
-    bar "Ch19 Texture<br/>+28%" : 28
-    bar "Ch21 Texture<br/>+1%" : 1
+quadrantChart
+    title "Hyperbolic Field Effects: Time vs Coagulation / Эффекты Гиперболического Поля: Время vs Свёртывание"
+    x-axis "Slower Time / Медленнее Время" --> "Faster Time / Быстрее Время"
+    y-axis "Less Coagulation / Меньше Свёртывание" --> "More Coagulation / Больше Свёртывание"
+    quadrant-1 "⏩ Ch19: ACCELERATED<br/>Меньше сгустков, быстрее старение"
+    quadrant-2 "⏪ Ch21: DECELERATED<br/>Плотные, медленное начало"
+    quadrant-3 "⏸️ Control: NORMAL<br/>Нормальное течение"
+    quadrant-4 "✨ Lysis: DECOMPOSITION<br/>Разложение (только Ch19)"
+    "⏸️ Control": [0.50, 0.50]
+    "⏩ Ch19": [0.85, 0.35]
+    "⏪ Ch21": [0.15, 0.45]
 ```
 
 ---
@@ -128,7 +164,7 @@ barChart-beta
 | # | Patient / Пациент | Photos / Фото | Date / Дата | Blood Group / Группа Крови | Key Feature / Ключевая Особенность | Link / Ссылка |
 |---|-------------------|---------------|-------------|---------------------------|-----------------------------------|---------------|
 | 1 | **Patient 01 / Пациент 01** | 📸 13 | 2026-01-24 | II+ | First experiment / Первый эксперимент | [📂 View](patient-01/photos/) |
-| 2 | **Patient 02 / Пациент 02** | 📸 25 | 2026-01-28 | III+ | Petri dish time-lapse / Чашка Петри | [📂 View](patient-02/photos/) |
+| 2 | **Patient 02 / Пациент 02** | 📸 25 | 2026-01-28 | III+ | Petri dish time-lapse + LYSIS / Чашка Петри + ЛИЗИС | [📂 View](patient-02/photos/) |
 | 3 | **Patient 03 / Пациент 03** | 📸 16 | 2026-01-29 | IV- | Rapid coagulation / Быстрое свёртывание | [📂 View](patient-03/photos/) |
 | 4 | **Patient 04 / Пациент 04** | 📸 4 | 2026-01-30 | IV+ | No clots in Ch21 / Без сгустков в Ch21 | [📂 View](patient-04/photos/) |
 | 5 | **Patient 05 / Пациент 05** | 📸 10 | 2026-01-31 | no data | Night session / Ночная сессия | [📂 View](patient-05/photos/) |
@@ -155,44 +191,27 @@ timeline
 
 ---
 
-## 🔬 KEY FINDINGS / КЛЮЧЕВЫЕ НАХОДКИ
+## 🔬 KEY FINDINGS SUMMARY / СВОДКА КЛЮЧЕВЫХ НАХОДОК
 
-### Statistical Summary / Статистическая Сводка
+### All Metrics Table / Таблица Всех Метрик
 
-| Finding / Находка | Channel / Канал | Value / Значение | Significance / Значимость |
-|-------------------|-----------------|------------------|---------------------------|
-| **Clot Count Reduction / Уменьшение Количества Сгустков** | ⏩ Ch19 | −37% (8.92 → 5.64) | 🔴 High / Высокая |
-| **Clot Area Reduction / Уменьшение Площади Сгустков** | ⏩ Ch19 | −42% (0.90% → 0.52%) | 🔴 High / Высокая |
-| **Lysis Case / Случай Лизиса** | ⏩ Ch19 | 1 case / 1 случай | 🎯 Unique / Уникальный |
-| **Delayed Coagulation / Замедленное Свёртывание** | ⏪ Ch21 | −3% count / −3% кол-во | 🟡 Moderate / Умеренная |
-| **Statistical Significance / Статистическая Значимость** | All / Все | p = 0.027 (Gemini) | ✅ Significant / Значимо |
+| Metric / Метрика | Control | Ch19 (Acceleration) | Ch21 (Deceleration) |
+|------------------|---------|---------------------|---------------------|
+| **📊 Clot Count / Количество** | 8.92 | **5.64 (−37%)** 🔻 | 8.69 (−3%) |
+| **📏 Clot Area / Площадь** | 0.90% | **0.52% (−42%)** 🔻 | 0.58% (−35%) 🔻 |
+| **🔍 Texture Contrast / Контраст** | 4.12 | **5.26 (+28%)** 🔺 | 4.16 (+1%) |
+| **📐 Edge Density / Плотность** | 0.0016 | 0.0012 (−25%) 🔻 | **0.0034 (+113%)** 🔺 |
+| **👁️ LLM Detection / Обнаружение** | 65% | **78% (+13 pp)** 🔺 | 41% (−24 pp) 🔻 |
+| **✨ Lysis Cases / Случаи Лизиса** | 0 | **1 (unique)** 🎯 | 0 |
+| **⏱️ Time Perception** | Normal | **Faster / Быстрее** | **Slower / Медленнее** |
 
-### Configuration Changes / Изменения Конфигурации
+### Statistical Significance / Статистическая Значимость
 
-```mermaid
-flowchart LR
-    subgraph Physical["Physical Changes / Физические Изменения"]
-        P1[⏩ Ch19: SMALLER clots<br/>Меньше сгустки]
-        P2[⏪ Ch21: DENSER formation<br/>Плотнее образование]
-    end
-    
-    subgraph Temporal["Temporal Effects / Временные Эффекты"]
-        T1[⏩ Ch19: ACCELERATED<br/>УСКОРЕННОЕ<br/>Samples appear OLDER]
-        T2[⏪ Ch21: DECELERATED<br/>ЗАМЕДЛЕННОЕ<br/>Samples appear YOUNGER]
-    end
-    
-    subgraph Structural["Structural Changes / Структурные Изменения"]
-        S1[⏩ Ch19: +28% texture contrast<br/>+28% текстурный контраст]
-        S2[⏪ Ch21: +1% texture contrast<br/>+1% текстурный контраст]
-    end
-    
-    style P1 fill:#ff9ff3
-    style P2 fill:#54a0ff
-    style T1 fill:#ff9ff3
-    style T2 fill:#54a0ff
-    style S1 fill:#ff9ff3
-    style S2 fill:#54a0ff
-```
+| Analysis / Анализ | Result / Результат | P-value | Significance / Значимость |
+|-------------------|-------------------|---------|---------------------------|
+| **Gemini LLM Vision** | 57.9% ch19 identification | p = 0.027 | ✅ Significant / Значимо |
+| **DINOv2 Linear Probe** | 47.4% ch19 identification | p = 0.146 | 🟡 Suggestive / Предполагаемо |
+| **Combined Evidence** | Consistent ch19 signal | — | ✅ Multi-method consensus |
 
 ---
 
@@ -216,6 +235,6 @@ flowchart LR
 
 ---
 
-**Last Updated / Последнее Обновление:** 2026-03-26 | **Data Hub Version / Версия Хаба Данных:** 2.0
+**Last Updated / Последнее Обновление:** 2026-03-26 | **Data Hub Version / Версия Хаба Данных:** 3.0
 
 **© 2026 Advanced Scientific Research Projects (ASRP) / Перспективные Научно-Исследовательские Разработки**
