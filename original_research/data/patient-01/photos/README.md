@@ -6,7 +6,7 @@
 
 ## 🎯 NAVIGATION / НАВИГАЦИЯ
 
-[Dataset Info / Инфо](#dataset-overview--описание-набора-данных) | [Photos / Фото](#photo-inventory--инвентаризация-фотографий) | [Protocol / Протокол](../protocol_part-01.pdf) | [All Patients / Все Пациенты](../../README.md)
+[Dataset Info / Инфо](#dataset-overview--описание-набора-данных) | [Photos / Фото](#photo-inventory--инвентаризация-фотографий) | [Protocol / Протокол](../protocol_part-01.pdf) | [All Patients / Все Пациенты](../../README.md) | [Data Hub / Хаб Данных](../../README.md)
 
 ---
 
@@ -47,21 +47,6 @@ timeline
         19:00:33 — 20:30:00 : 📸 13 photos / 13 фото
 ```
 
-### 📋 CHRONOLOGY TABLE / ТАБЛИЦА ХРОНОЛОГИИ
-
-| Time / Время | Event / Событие | Samples / Образцы |
-|--------------|-----------------|-------------------|
-| **18:56:10** | Blood collection started / Забор крови начат | — |
-| **18:59:59** | Blood collection completed / Забор крови завершен | — |
-| **19:00:30** | Centrifugation started / Центрифугирование начато | All / Все |
-| **19:06:10** | Centrifugation completed / Центрифугирование завершено | — |
-| **19:12:30** | Sample 0.1.1 prepared / Образец подготовлен | 0.1.1 (Control) |
-| **19:13:25** | Sample 19.1.1 prepared / Образец подготовлен | 19.1.1 (Channel 19) |
-| **19:13:40** | Sample 21.1.1 prepared / Образец подготовлен | 21.1.1 (Channel 21) |
-| **19:14:20** | Sample 0.1.2 prepared / Образец подготовлен | 0.1.2 (Control) |
-| **19:18:29** | **Irradiation started / Облучение начато** | 19.1.1, 21.1.1 |
-| **20:30:00** | **Irradiation completed / Облучение завершено** | — |
-
 ---
 
 ## 🧪 SAMPLES / ОБРАЗЦЫ
@@ -74,6 +59,59 @@ timeline
 | `0.1.2` | ⏸️ Control / Контроль | 19:14:20 | No exposure / Без воздействия |
 | `19.1.1` | ⏩ Channel 19 / Канал 19 | 19:13:25 | Time acceleration / Ускорение времени |
 | `21.1.1` | ⏪ Channel 21 / Канал 21 | 19:13:40 | Time deceleration / Замедление времени |
+
+---
+
+## 📈 CHANNEL METRICS ANALYSIS / АНАЛИЗ МЕТРИК ПО КАНАЛАМ
+
+### Clot Detection Rate (LLM Vision) / Частота Обнаружения Сгустков
+
+```mermaid
+barChart
+    title Patient 01: Clot Detection by Channel / Пациент 01: Обнаружение по Каналам
+    x-axis "Channel / Канал"
+    y-axis "Detection Rate % / Процент %"
+    bar "⏸️ Control\nControl" : 75
+    bar "⏩ Ch19\nAcceleration" : 80
+    bar "⏪ Ch21\nDeceleration" : 75
+```
+
+### Photo Distribution Timeline / Распределение Фото во Времени
+
+```mermaid
+gantt
+    title Patient 01: Photo Capture Timeline / Пациент 01: Временная Шкала Съёмки
+    dateFormat HH:mm:ss
+    axisFormat %H:%M
+    
+    section Pre-Irradiation
+    IMG_3250-3253 : 19:00:33, 4m
+    section During Irradiation
+    IMG_3254-3258 : 19:11:05, 20m
+    section Post-Irradiation
+    IMG_3259-3262 : 20:38:53, 8m
+```
+
+### Sample Comparison Matrix / Матрица Сравнения Образцов
+
+```mermaid
+flowchart TB
+    subgraph Control["⏸️ Control / Контроль"]
+        C1["2 samples / 2 образца<br/>0.1.1, 0.1.2<br/>4 photos / 4 фото<br/>Clot rate: 75%"]
+    end
+    
+    subgraph Ch19["⏩ Channel 19 / Канал 19"]
+        A1["1 sample / 1 образец<br/>19.1.1<br/>5 photos / 5 фото<br/>Clot rate: 80%<br/>Yellow-olive plasma"]
+    end
+    
+    subgraph Ch21["⏪ Channel 21 / Канал 21"]
+        D1["1 sample / 1 образец<br/>21.1.1<br/>4 photos / 4 фото<br/>Clot rate: 75%<br/>Yellow-greenish plasma"]
+    end
+    
+    style Control fill:#5fcdff
+    style Ch19 fill:#ff9ff3
+    style Ch21 fill:#54a0ff
+```
 
 ---
 
@@ -96,50 +134,6 @@ timeline
 | 11 | `IMG_3260.HEIC` | 20:38:53 | 21.1.1, 0.1.1, 19.1.1 | Part 2, p.2 | [🖼️](jpg/IMG_3260.jpg) |
 | 12 | `IMG_3261.HEIC` | 17:32:54 | 0.1.1, 21.1.1, 19.1.1 | Part 2, p.3 | [🖼️](jpg/IMG_3261.jpg) |
 | 13 | `IMG_3262.HEIC` | 19:11:05 | 21.1.1, 0.1.1, 19.1.1 | Part 2, p.4 | [🖼️](jpg/IMG_3262.jpg) |
-
-### Photo Timeline Visualization / Визуализация Временной Шкалы Фото
-
-```mermaid
-gantt
-    title Photo Capture Timeline / Временная Шкала Съёмки
-    dateFormat HH:mm:ss
-    axisFormat %H:%M
-    
-    section Early Photos / Ранние Фото
-    IMG_3250 : 19:00:33, 2m
-    IMG_3252 : 19:02:07, 2m
-    IMG_3251 : 19:02:24, 2m
-    
-    section Mid Photos / Средние Фото
-    IMG_3258 : 19:11:17, 2m
-    IMG_3262 : 19:11:05, 2m
-    
-    section Late Photos / Поздние Фото
-    IMG_3260 : 20:38:53, 2m
-    IMG_3254 : 20:46:15, 2m
-    IMG_3259 : 20:46:28, 2m
-```
-
----
-
-## 📄 EXPERIMENT PROTOCOL / ПРОТОКОЛ ЭКСПЕРИМЕНТА
-
-### Protocol Details / Детали Протокола
-
-| Parameter / Параметр | Value / Значение |
-|---------------------|------------------|
-| **Blood Group / Группа Крови** | II+ (Rh positive / Rh положительный) |
-| **Blood Collection / Забор Крови** | 18:56:10 — 18:59:59 (4 test tubes / 4 пробирки) |
-| **Centrifugation / Центрифугирование** | 19:00:30 — 19:06:10 (2000 rpm, 5 min) |
-| **Irradiation / Облучение** | 19:18:29 — 20:30:00 (~1h 12min / ~1ч 12мин) |
-| **Temperature / Температура** | 17°C constant / постоянно |
-
-### Protocol PDF Links / Ссылки на PDF Протоколы
-
-| Document / Документ | Format / Формат | Size / Размер | Link / Ссылка |
-|---------------------|-----------------|---------------|---------------|
-| Protocol Part 1 / Протокол Часть 1 | PDF | ~93 MB | [📄 protocol_part-01.pdf](../protocol_part-01.pdf) |
-| Protocol Part 2 / Протокол Часть 2 | PDF | ~38 MB | [📄 protocol_part-02.pdf](../protocol_part-02.pdf) |
 
 ---
 
@@ -180,6 +174,6 @@ gantt
 
 ---
 
-**Last Updated / Последнее Обновление:** 2026-03-26 | **Dataset Version / Версия Набора Данных:** 1.0
+**Last Updated / Последнее Обновление:** 2026-03-26 | **Dataset Version / Версия Набора Данных:** 2.0
 
 **© 2026 Advanced Scientific Research Projects (ASRP) / Перспективные Научно-Исследовательские Разработки**

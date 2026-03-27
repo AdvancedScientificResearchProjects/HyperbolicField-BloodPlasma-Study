@@ -1,61 +1,74 @@
-# 📸 Patient 03 Photo Dataset / Фото Dataset Пациента 03
+# 📸 Patient 03 Photo Dataset
 
-**Experiment Date / Дата Эксперимента:** 2026-01-29 | **Blood Group / Группа Крови:** IV- | **Total Photos / Всего Фото:** 16
+**Experiment Date:** 2026-01-29 | **Blood Group:** IV- | **Total Photos:** 16
 
 ---
 
-## 🎯 NAVIGATION / НАВИГАЦИЯ
+## 🎯 NAVIGATION
 
-[Info / Инфо](#overview) | [Photos / Фото](#photo-inventory) | [Protocol / Протокол](../protocol_part-01.pdf) | [All Patients / Все Пациенты](../../README.md)
+[Info](#overview) | [Photos](#photo-inventory) | [Protocol](../protocol_part-01.pdf) | [All Patients](../../README.md) | [Data Hub](../../README.md)
 
 ---
 
 ## 📊 OVERVIEW / ОБЗОР
 
 ```mermaid
-pie title Photo Distribution / Распределение Фото
-    "⏸️ Control / Контроль" : 5
-    "⏩ Channel 19 / Канал 19" : 5
-    "⏪ Channel 21 / Канал 21" : 6
+pie title Photo Distribution
+    "⏸️ Control" : 5
+    "⏩ Channel 19" : 5
+    "⏪ Channel 21" : 6
 ```
 
-| Metric / Метрика | Value / Значение |
-|------------------|------------------|
-| **📸 Photos / Фото** | 16 images / 16 изображений |
-| **🩸 Blood / Кровь** | IV- (Rh negative / Rh отрицательный) |
-| **🧪 Samples / Образцы** | 4 (2 control, 1 ch19, 1 ch21) |
-| **⏰ Duration / Длительность** | ~1h 8min / ~1ч 8мин |
+| Metric | Value |
+|--------|-------|
+| **📸 Photos** | 16 |
+| **🩸 Blood** | IV- (Rh negative) |
+| **🧪 Samples** | 4 |
 
-**⚠️ Note / Примечание:** Rapid coagulation observed / Наблюдалось быстрое свёртывание
+**⚠️ Note:** Rapid coagulation observed / Быстрое свёртывание
 
 ---
 
-## ⏰ TIMELINE / ВРЕМЕННАЯ ШКАЛА
+## 📈 CHANNEL METRICS
+
+### Photo Distribution
+
+```mermaid
+barChart
+    title Patient 03: Photos per Channel
+    x-axis "Channel"
+    y-axis "Count"
+    bar "⏸️ Control" : 5
+    bar "⏩ Ch19" : 5
+    bar "⏪ Ch21" : 6
+```
+
+### Timeline
 
 ```mermaid
 timeline
-    title Patient 03 / Пациент 03
-    section Evening Session / Вечерняя Сессия
-        21:17 : Blood / Кровь
-        21:22 : Centrifuge / Центрифуга
-        21:35 : Irradiation / Облучение
-        20:41 : Photos (16) / Фото
+    title Patient 03 Timeline
+    section Evening
+        21:17 : Blood
+        21:22 : Centrifuge
+        21:35 : Irradiation
+        20:41 : Photos (16)
 ```
 
 ---
 
-## 📁 PHOTOS / ФОТО (16)
+## 📁 PHOTOS (16)
 
-| Files / Файлы | Count / Кол-во | Description / Описание | Preview / Превью |
-|---------------|----------------|------------------------|------------------|
-| `IMG_3290-3305` | 16 | Individual & comparison / Индивид. и сравнения | [🖼️](jpg/) |
+| Files | Count | Preview |
+|-------|-------|---------|
+| `IMG_3290-3305` | 16 | [🖼️](jpg/) |
 
 ---
 
-## 🔗 OTHERS / ДРУГИЕ
+## 🔗 OTHERS
 
 [P01](../../patient-01/) | [P02](../../patient-02/) | [P04](../../patient-04/) | [P05](../../patient-05/) | [P06](../../patient-06/) | [P07](../../patient-07/)
 
 ---
 
-**Last Updated / Последнее Обновление:** 2026-03-26
+**Last Updated:** 2026-03-26
